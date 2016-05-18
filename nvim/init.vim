@@ -23,7 +23,7 @@ call plug#end()
 set number
 
 " colors
-set background=light
+set background=dark
 colorscheme solarized
 
 " airline config
