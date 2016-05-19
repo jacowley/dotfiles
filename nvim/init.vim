@@ -51,3 +51,6 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_javascript_checkers = ['eslint', 'flow']
 let g:syntastic_javascript_checkers = ['eslint']
 
+" makes copy/paste work
+set clipboard=unnamed
+
