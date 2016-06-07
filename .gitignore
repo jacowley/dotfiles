@@ -1,3 +1,6 @@
 /nvim/plugged/
 /nvim/autoload/plug.vim
+/nvim/log/
+
+*.old
 

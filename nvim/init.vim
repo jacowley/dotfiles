@@ -10,12 +10,14 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'flowtype/vim-flow'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
@@ -37,19 +39,15 @@ let g:jsx_ext_required = 0
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
 
-" syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" vim-flow
+let g:flow#autoclose = 1
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" disable flow checking for performance
-"let g:syntastic_javascript_checkers = ['eslint', 'flow']
-let g:syntastic_javascript_checkers = ['eslint']
+" neomake
+"let g:neomake_logfile=$HOME.'/.config/nvim/log/neomake.log'
+"let g:neomake_verbose = 3
+let g:neomake_open_list = 2
+let g:neomake_javascript_enabled_makers = ['eslint']
+autocmd! BufWritePost *.js Neomake
 
 " makes copy/paste work
 set clipboard=unnamed
