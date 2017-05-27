@@ -15,6 +15,7 @@ Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
@@ -24,11 +25,13 @@ set number
 
 " colors
 set background=dark
+colorscheme muon
 
 " airline config
 " always show statusline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'molokai'
 
 " vim-jsx config (bundled with vim-polyglot)
 let g:jsx_ext_required = 0
@@ -45,4 +48,10 @@ autocmd! BufWritePost *.js Neomake
 
 " makes copy/paste work
 set clipboard=unnamed
+
+" mouse
+set mouse=a
+
+" reload files when they change on disk
+set autoread
 
