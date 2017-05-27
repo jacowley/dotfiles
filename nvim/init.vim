@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'flowtype/vim-flow'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
@@ -20,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " show line numbers
+set relativenumber
 set number
 
 " colors
@@ -35,9 +35,6 @@ let g:jsx_ext_required = 0
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
-
-" vim-flow
-let g:flow#autoclose = 1
 
 " neomake
 "let g:neomake_logfile=$HOME.'/.config/nvim/log/neomake.log'
