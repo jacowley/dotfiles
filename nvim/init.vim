@@ -8,7 +8,6 @@ endif
 " vim-plug configuration
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'flowtype/vim-flow'
 Plug 'ntpeters/vim-better-whitespace'
@@ -17,7 +16,6 @@ Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
@@ -26,7 +24,6 @@ set number
 
 " colors
 set background=dark
-colorscheme solarized
 
 " airline config
 " always show statusline
