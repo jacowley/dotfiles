@@ -11,11 +11,14 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
+Plug 'sbdchd/neoformat'
+Plug 'chrisbra/NrrwRgn'
+Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -39,13 +42,6 @@ let g:jsx_ext_required = 0
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
 
-" neomake
-"let g:neomake_logfile=$HOME.'/.config/nvim/log/neomake.log'
-"let g:neomake_verbose = 3
-let g:neomake_open_list = 2
-let g:neomake_javascript_enabled_makers = ['eslint']
-autocmd! BufWritePost *.js Neomake
-
 " makes copy/paste work
 set clipboard=unnamed
 
@@ -54,4 +50,10 @@ set mouse=a
 
 " reload files when they change on disk
 set autoread
+
+" prettier JavaScript formatter
+autocmd FileType javascript set formatprg=prettier\ --stdin
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
