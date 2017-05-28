@@ -5,6 +5,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
 endif
 
+filetype plugin on
+
 " vim-plug configuration
 call plug#begin('~/.config/nvim/plugged')
 
@@ -19,6 +21,7 @@ Plug 'sbdchd/neoformat'
 Plug 'chrisbra/NrrwRgn'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -56,4 +59,8 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
 
