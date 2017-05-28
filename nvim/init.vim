@@ -82,3 +82,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!{.git,node_modules}/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
+" vim-better-whitespace
+let g:better_whitespace_filetypes_blacklist = ['diff', 'gitcommit', 'help', 'markdown', 'qf', 'taskdata', 'taskedit', 'unite']
+
