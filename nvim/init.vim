@@ -25,6 +25,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -87,4 +88,8 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 
 " vim-better-whitespace
 let g:better_whitespace_filetypes_blacklist = ['diff', 'gitcommit', 'help', 'markdown', 'qf', 'taskdata', 'taskedit', 'unite']
+
+" vim-markdown-preview with grip
+let vim_markdown_preview_github = 1
+let vim_markdown_preview_browser = 'Google Chrome'
 
