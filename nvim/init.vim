@@ -60,6 +60,9 @@ set autoread
 " prettier JavaScript formatter
 autocmd FileType javascript set formatprg=prettier\ --stdin
 
+" neoformat
+let g:neoformat_try_formatprg = 1
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
