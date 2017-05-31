@@ -31,6 +31,9 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
+Plug 'tpope/vim-surround'
+Plug 'majutsushi/tagbar'
+Plug 'steelsojka/deoplete-flow'
 
 call plug#end()
 
@@ -104,4 +107,7 @@ let g:javascript_plugin_flow = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" deoplete-flow
+let g:deoplete#sources#flow#flow_bin = 'flow'
 
