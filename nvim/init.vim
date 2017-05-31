@@ -28,6 +28,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leshill/vim-json'
 
 call plug#end()
 
@@ -94,4 +97,11 @@ let g:better_whitespace_filetypes_blacklist = ['diff', 'gitcommit', 'help', 'mar
 " vim-markdown-preview with grip
 let vim_markdown_preview_github = 1
 let vim_markdown_preview_browser = 'Google Chrome'
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
