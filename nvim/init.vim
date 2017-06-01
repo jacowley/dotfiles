@@ -34,6 +34,7 @@ Plug 'leshill/vim-json'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'steelsojka/deoplete-flow'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
