@@ -33,6 +33,11 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'steelsojka/deoplete-flow'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'wokalski/autocomplete-flow'
+
+" Required for completion in autocomplete-flow
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
 
@@ -73,6 +78,9 @@ let g:neoformat_try_formatprg = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
