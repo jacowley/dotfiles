@@ -4,5 +4,7 @@
 
 *.old
 
-/tmux/plugins/
+/tmux/plugins/tmux-sensible
+/tmux/plugins/tmux-tasks
+/tmux/plugins/vim-tmux-navigator
 
