@@ -4,5 +4,5 @@
 
 *.old
 
-/tmux/plugins/tmux-tasks/
+/tmux/plugins/
 
