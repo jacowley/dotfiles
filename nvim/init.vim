@@ -118,3 +118,6 @@ let g:jsx_ext_required = 0
 " deoplete-flow
 let g:deoplete#sources#flow#flow_bin = 'flow'
 
+" Ale linters
+let g:ale_echo_msg_format = '%linter%: %s'
+
