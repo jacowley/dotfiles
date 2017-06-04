@@ -34,6 +34,7 @@ Plug 'majutsushi/tagbar'
 Plug 'steelsojka/deoplete-flow'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wokalski/autocomplete-flow'
+Plug 'airblade/vim-gitgutter'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
