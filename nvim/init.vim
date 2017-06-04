@@ -56,6 +56,7 @@ colorscheme muon
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-jsx config (bundled with vim-polyglot)
 let g:jsx_ext_required = 0
@@ -80,9 +81,19 @@ let g:neoformat_try_formatprg = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+" autocmd CompleteDone * silent! pclose!
 
 " neosnippet
 let g:neosnippet#enable_completed_snippet = 1
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
