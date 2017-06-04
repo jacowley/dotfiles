@@ -118,7 +118,15 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " deoplete-flow
-let g:deoplete#sources#flow#flow_bin = 'flow'
+function! StrTrim(txt)
+    return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+endfunction
+
+let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
+
+if g:flow_path != 'flow not found'
+    let g:deoplete#sources#flow#flow_bin = g:flow_path
+endif
 
 " Ale linters
 let g:ale_echo_msg_format = '[%linter%] %s'
