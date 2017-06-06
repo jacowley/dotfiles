@@ -76,6 +76,7 @@ set autoread
 
 " prettier JavaScript formatter
 autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js Neoformat
 
 " neoformat
 let g:neoformat_try_formatprg = 1
