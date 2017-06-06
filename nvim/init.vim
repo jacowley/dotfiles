@@ -36,6 +36,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'wokalski/autocomplete-flow'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
+Plug 'zoubin/vim-gotofile'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
