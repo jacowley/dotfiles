@@ -37,6 +37,7 @@ Plug 'wokalski/autocomplete-flow'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
 Plug 'zoubin/vim-gotofile'
+Plug 'qpkorr/vim-bufkill'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
