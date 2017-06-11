@@ -49,6 +49,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'eagletmt/neco-ghc'
+Plug 'elmcast/elm-vim'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
@@ -76,7 +77,7 @@ let g:airline_theme = 'oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
 
 " vim-polyglot
-let g:polyglot_disabled = ['haskell']
+let g:polyglot_disabled = ['elm', 'haskell']
 
 " vim-jsx config (bundled with vim-polyglot)
 let g:jsx_ext_required = 0
@@ -168,3 +169,6 @@ let g:ale_linters = {
 
 " neco ghc
 let g:necoghc_enable_detailed_browse = 1
+
+" elm-vim
+let g:elm_format_autosave = 1
