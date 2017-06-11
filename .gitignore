@@ -8,3 +8,4 @@
 /tmux/plugins/tmux-tasks
 /tmux/plugins/vim-tmux-navigator
 
+.DS_Store

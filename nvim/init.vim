@@ -5,6 +5,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
 endif
 
+" enable true colours
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 filetype plugin on
 
 " vim-plug configuration
@@ -38,6 +43,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
 Plug 'zoubin/vim-gotofile'
 Plug 'qpkorr/vim-bufkill'
+Plug 'ryanoasis/vim-devicons'
+Plug 'mhartington/oceanic-next'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'pangloss/vim-javascript'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'eagletmt/neco-ghc'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
@@ -45,20 +56,27 @@ Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
 
+" haskell-vim
+syntax on
+filetype plugin indent on
+
 " show line numbers
 set relativenumber
 set number
 
 " colors
+colorscheme OceanicNext
 set background=dark
-colorscheme muon
 
 " airline config
 " always show statusline
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
+
+" vim-polyglot
+let g:polyglot_disabled = ['haskell']
 
 " vim-jsx config (bundled with vim-polyglot)
 let g:jsx_ext_required = 0
@@ -144,4 +162,9 @@ endif
 
 " Ale linters
 let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_linters = {
+            \ 'haskell': [],
+            \}
 
+" neco ghc
+let g:necoghc_enable_detailed_browse = 1
