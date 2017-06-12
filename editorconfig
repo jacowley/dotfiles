@@ -11,6 +11,10 @@ trim_trailing_whitespace = true
 [*.{js,jsx,json}]
 indent_size = 2
 
+[*.rs]
+indent_size = 4
+indent_style = space
+
 [Makefile]
 indent_style = tab
 
