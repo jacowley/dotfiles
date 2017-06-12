@@ -4,3 +4,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "oceanic-next-iterm"]
+	path = oceanic-next-iterm
+	url = https://github.com/mhartington/oceanic-next-iterm.git

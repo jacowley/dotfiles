@@ -66,8 +66,13 @@ set relativenumber
 set number
 
 " colors
-colorscheme OceanicNext
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+syntax enable
 set background=dark
+colorscheme OceanicNext
 
 " airline config
 " always show statusline
