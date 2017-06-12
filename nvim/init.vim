@@ -5,11 +5,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
 endif
 
-" enable true colours
-if (has("termguicolors"))
-  set termguicolors
-endif
-
 filetype plugin on
 
 " vim-plug configuration
@@ -72,7 +67,8 @@ endif
 
 syntax enable
 set background=dark
-colorscheme OceanicNext
+" colorscheme OceanicNext
+colorscheme muon
 
 " airline config
 " always show statusline
