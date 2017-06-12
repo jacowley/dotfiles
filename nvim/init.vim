@@ -45,12 +45,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'elmcast/elm-vim'
+Plug 'rust-lang/rust.vim'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
+
+" rust
+let g:rustfmt_autosave = 1
 
 " haskell-vim
 syntax on
@@ -166,6 +170,7 @@ endif
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_linters = {
             \ 'haskell': [],
+            \ 'rust': ['rustc']
             \}
 
 " neco ghc
