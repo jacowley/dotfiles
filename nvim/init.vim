@@ -173,6 +173,8 @@ let g:ale_linters = {
             \ 'rust': ['cargo']
             \}
 
+set diffopt+=vertical
+
 " neco ghc
 let g:necoghc_enable_detailed_browse = 1
 
