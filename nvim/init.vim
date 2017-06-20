@@ -168,10 +168,10 @@ endif
 
 " Ale linters
 let g:ale_echo_msg_format = '[%linter%] %s'
-let g:ale_linters = {
-            \ 'haskell': [],
-            \ 'rust': ['cargo']
-            \}
+" let g:ale_linters = {
+            " \ 'haskell': [],
+            " \ 'rust': ['cargo']
+            " \}
 
 set diffopt+=vertical
 
@@ -180,3 +180,7 @@ let g:necoghc_enable_detailed_browse = 1
 
 " elm-vim
 let g:elm_format_autosave = 1
+
+" Set display characters for tab and trailing
+set list listchars=trail:·,tab:▸\
+hi NonText ctermfg=7 guifg=white
