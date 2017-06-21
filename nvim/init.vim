@@ -46,6 +46,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'craigemery/vim-autotag'
 
 " Required for completion in autocomplete-flow
 Plug 'Shougo/neosnippet'
@@ -184,3 +185,6 @@ let g:elm_format_autosave = 1
 " Set display characters for tab and trailing
 set list listchars=trail:·,tab:▸\
 hi NonText ctermfg=7 guifg=white
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>

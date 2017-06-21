@@ -8,4 +8,5 @@ ln -s $DIR/tmux.conf ~/.tmux.conf
 ln -s $DIR/tmux ~/.tmux
 ln -s $DIR/editorconfig ~/.editorconfig
 ln -s $DIR/taskrc ~/.taskrc
+ln -s $DIR/ctags ~/.ctags
 
