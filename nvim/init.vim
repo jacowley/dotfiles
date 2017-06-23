@@ -54,6 +54,9 @@ Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
 
+" Disable startup screen
+set shortmess+=I
+
 " rust
 let g:rustfmt_autosave = 1
 
