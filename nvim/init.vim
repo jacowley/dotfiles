@@ -175,10 +175,10 @@ endif
 
 " Ale linters
 let g:ale_echo_msg_format = '[%linter%] %s'
-" let g:ale_linters = {
-            " \ 'haskell': [],
-            " \ 'rust': ['cargo']
-            " \}
+let g:ale_linters = {
+            \ 'haskell': [],
+            \ 'rust': ['cargo']
+            \}
 
 set diffopt+=vertical
 
