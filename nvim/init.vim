@@ -94,6 +94,9 @@ let g:jsx_ext_required = 0
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
 
+" FZF
+map <C-m> :Files<CR>
+
 " makes copy/paste work
 set clipboard=unnamed
 
