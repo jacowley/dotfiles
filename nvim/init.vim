@@ -24,16 +24,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'leshill/vim-json'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'steelsojka/deoplete-flow'
+" Plug 'steelsojka/deoplete-flow'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'wokalski/autocomplete-flow'
+" Plug 'wokalski/autocomplete-flow'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
 Plug 'zoubin/vim-gotofile'
@@ -83,7 +81,6 @@ colorscheme muon
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'oceanicnext'
-let g:airline#extensions#tabline#enabled = 1
 
 " vim-polyglot
 let g:polyglot_disabled = ['elm', 'haskell']
@@ -109,6 +106,11 @@ set autoread
 " prettier JavaScript formatter
 autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd BufWritePre *.js Neoformat
+
+" augroup fmt
+  " autocmd!
+  " autocmd BufWritePre * undojoin | Neoformat
+" augroup END
 
 " neoformat
 let g:neoformat_try_formatprg = 1
@@ -157,21 +159,21 @@ let vim_markdown_preview_browser = 'Google Chrome'
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
+" let g:javascript_plugin_flow = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0
 
 " deoplete-flow
-function! StrTrim(txt)
-    return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-endfunction
+" function! StrTrim(txt)
+    " return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+" endfunction
 
-let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
+" let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
 
-if g:flow_path != 'flow not found'
-    let g:deoplete#sources#flow#flow_bin = g:flow_path
-endif
+" if g:flow_path != 'flow not found'
+    " let g:deoplete#sources#flow#flow_bin = g:flow_path
+" endif
 
 " Ale linters
 let g:ale_echo_msg_format = '[%linter%] %s'
